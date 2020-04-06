@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+        challenge_orange:
+                container_name: challenge_orange
+                volumes:
+                        - "jenkins_home:/var/jenkins_home"
+                ports:
+                        - "8080:8080"
+                        - "50000:50000"
+                build: .
+
+volumes:
+        jenkins_home:
+
